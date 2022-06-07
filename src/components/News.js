@@ -22,8 +22,9 @@ export class News extends Component {
       page: 1,
     };
   }
-  async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=d7933a8d17c941e49e0bba3c6b81d59f&page=1&pageSize=${this.props.pageSize}`;
+
+  async updateNews() {
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=d7933a8d17c941e49e0bba3c6b81d59f&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -34,41 +35,18 @@ export class News extends Component {
       loading: false,
     });
   }
-  handlePreviousClick = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=${
-      this.props.country
-    }&category=${
-      this.props.category
-    }&apiKey=d7933a8d17c941e49e0bba3c6b81d59f&page=${
-      this.state.page - 1
-    }&pageSize=${this.props.pageSize}`;
-    this.setState({ loading: true });
-    let data = await fetch(url);
-    let parsedData = await data.json();
 
-    this.setState({
-      page: this.state.page - 1,
-      articles: parsedData.articles,
-      loading: false,
-    });
+  async componentDidMount() {
+    this.updateNews();
+  }
+
+  handlePreviousClick = async () => {
+    this.setState({ page: this.state.page - 1 });
+    this.updateNews();
   };
   handleNextClick = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=${
-      this.props.country
-    }&category=${
-      this.props.category
-    }&apiKey=d7933a8d17c941e49e0bba3c6b81d59f&page=${
-      this.state.page + 1
-    }&pageSize=${this.props.pageSize}`;
-    this.setState({ loading: true });
-    let data = await fetch(url);
-    let parsedData = await data.json();
-
-    this.setState({
-      page: this.state.page + 1,
-      articles: parsedData.articles,
-      loading: false,
-    });
+    this.setState({ page: this.state.page + 1 });
+    this.updateNews();
   };
 
   render() {
@@ -91,6 +69,9 @@ export class News extends Component {
                         : "https://cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/ab6ce83a-e520-44ba-98c2-1d580a095b97/ffcdd5af-7544-4df8-9bce-5e1361cfd371/1280x720/match/image.jpg"
                     }
                     newsUrl={element.url}
+                    author={element.author}
+                    publishedAt={element.publishedAt}
+                    source={element.source.name}
                   />
                 </div>
               );
