@@ -73,7 +73,10 @@ export class News extends Component {
   render() {
     return (
       <>
-        <h2 className="my-3 py-3 text-center">
+        <h2
+          className=" text-center"
+          style={{ marginTop: "90px", marginBottom: "30px" }}
+        >
           NewsMonkey - Top{" "}
           {this.props.category.charAt(0).toUpperCase() +
             this.props.category.slice(1)}{" "}

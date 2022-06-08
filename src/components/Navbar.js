@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg bg-warning navbar-warning">
+      <nav className="navbar navbar-expand-lg bg-warning navbar-warning fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             NewsMonkey
