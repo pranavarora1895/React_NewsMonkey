@@ -30,7 +30,7 @@ export default class App extends Component {
                   apiKey={this.apiKey}
                   key="general"
                   pageSize={this.pageSize}
-                  country="in"
+                  country="ca"
                   category="general"
                 />
               }
@@ -44,7 +44,7 @@ export default class App extends Component {
                   apiKey={this.apiKey}
                   key="business"
                   pageSize={this.pageSize}
-                  country="in"
+                  country="ca"
                   category="business"
                 />
               }
@@ -58,7 +58,7 @@ export default class App extends Component {
                   apiKey={this.apiKey}
                   key="entertainment"
                   pageSize={this.pageSize}
-                  country="in"
+                  country="ca"
                   category="entertainment"
                 />
               }
@@ -72,7 +72,7 @@ export default class App extends Component {
                   apiKey={this.apiKey}
                   key="general"
                   pageSize={this.pageSize}
-                  country="in"
+                  country="ca"
                   category="general"
                 />
               }
@@ -86,7 +86,7 @@ export default class App extends Component {
                   apiKey={this.apiKey}
                   key="health"
                   pageSize={this.pageSize}
-                  country="in"
+                  country="ca"
                   category="health"
                 />
               }
@@ -100,7 +100,7 @@ export default class App extends Component {
                   apiKey={this.apiKey}
                   key="science"
                   pageSize={this.pageSize}
-                  country="in"
+                  country="ca"
                   category="science"
                 />
               }
@@ -114,7 +114,7 @@ export default class App extends Component {
                   apiKey={this.apiKey}
                   key="sports"
                   pageSize={this.pageSize}
-                  country="in"
+                  country="ca"
                   category="sports"
                 />
               }
@@ -128,7 +128,7 @@ export default class App extends Component {
                   apiKey={this.apiKey}
                   key="technology"
                   pageSize={this.pageSize}
-                  country="in"
+                  country="ca"
                   category="technology"
                 />
               }
