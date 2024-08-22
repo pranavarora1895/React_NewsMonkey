@@ -2,6 +2,16 @@
 
 NewsMonkey is a React application that provides users with the latest news using the NewsAPI. It allows users to view and search for news articles from various sources and categories.
 
+### Landing Page
+
+![Screenshot 2024-08-21 223910](https://github.com/user-attachments/assets/0e11723c-9993-4101-a248-22ddd2617f0e)
+
+### Specific News Page (for example, Science)
+
+![Screenshot 2024-08-21 223934](https://github.com/user-attachments/assets/2b5277a5-5ab8-4dcf-ad4e-2a2fc92506f1)
+
+
+
 ## Features
 
 - Fetches news articles from NewsAPI
